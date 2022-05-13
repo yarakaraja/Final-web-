@@ -1,61 +1,206 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap');
-
-  *{
-font-family: 'Bitter', serif;
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-.header{
-width: 1500px;
-padding: 50px;
-background: #CEA974;
-margin: 25px auto;
-border-radius: 5px;
-text-align: center;
-
-}
-.header p{
-font-size: 60px;
-font-weight: 700;
-color: #523915;
-}
-.nav{
-  background-color:white;
-  display:flex;
-  justify-content:center;
-  margin:22px;
-}
-text{
-  display:block;
-  width:210px;
-line-height:5px;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Arimo');
-
-body {
-    display: flex;
-    justify-content: center;
-    background-color: #EEE6DB;
+@media all (max-width:736px;){
+  h1{
+    color:red;
+  }
 }
-.tde{
-  background-color: #C8AB81;
-  text-align: center;}
+body {
+	display: grid;
+	grid-template-areas:
+    "header header header"
+    "nav section aside"
+    "footer footer footer";
+	grid-template-rows: 200px 1fr 350px;
+	grid-template-columns: 12% 1fr 20%;
+	grid-gap: 1px;
+  height: 200vh;
+  width:300vh;
+  margin: 1px;
+}
+
+header {
+	background:#D7E9F0;
+	grid-area: header;
+
+}
+
+
+nav {
+	background: #88A9C1;
+	grid-area: nav;
+  color:white;
+
+}
+
+section {
+	background: #B7D6E3;
+	grid-area: section;
+}
+
+aside {
+	background:#88A9C1 ;
+	grid-area: aside;
+  color:white;
+}
+
+footer {
+	background:#577B8B;
+	grid-area: footer;
+
+}
+
+header, nav, section, aside, footer {
+	padding: 5px;
+}
+h1{
+  color:#05385F;
+  text-align:center;
+  font-size: 66px;
+  padding:15px;
+  margin:0px;
+font-family: 'Great Vibes', cursive;
+}
+ul a{
+  font-size:22px;
+  padding:10px;
+
+}
+.more {
+ font-size:22px;
+
+}
+h2{
+  font-size:22px;
+  text-align:center;
+}
+.data{
+  color:white;
+
+}
+.img1{
+   width:100px;
+  height:50px;
+  padding:20px;
+  margin:20px;
+}
+.img2{
+  width:20px;
+  height:40px;
+  padding:10px;
+  margin:5px;
+}
+
+.img3{
+  width:20px;
+  height:40px;
+  padding:10px;
+  margin:5px;
+}
+.img4{
+  width:20px;
+  height:40px;
+  padding:10px;
+  margin:5px;
+
+}
+.p2{
+  font-size:17px;
+  text-align:center;
+
+
+}
+.t{
+  font-size:30px;
+  text-align:center;
+  color:#05385F;
+}
+.currency{
+  color:white;
+}
+.dropdown_language{
+  color:white;
+}
+ol a{
+  font-size:17px;
+  padding:10px;
+  color:white
+
+}
+.p3{
+  color:white;
+  font-size:44px;
+  text-align:center;
+  font-family: 'PT Serif', serif;
+}
+p{
+  color:white;
+  font-size:22px;
+  font-family: 'PT Serif', serif;
+}
+.img22{
+   width:100px;
+  height:50px;
+  padding:10px;
+  margin:5px;
+
+
+
+}
+.img33{
+   width:50px;
+  height:100px;
+  padding:10px;
+  margin:5px;
+
+}
+.img44{
+   width:50px;
+  height:100px;
+  padding:10px;
+  margin:5px;
+
+}
+.p5{
+  color:white;
+  font-size:55px;
+  text-align:center;
+  font-family: 'PT Serif', serif;
+}
+.img77{
+  width:50px;
+  height:100px;
+  padding:10px;
+  margin:5px;
+
+}
+.img88{
+ width:50px;
+  height:100px;
+  padding:10px;
+  margin:5px;
+
+}
+.img12{
+   width:50px;
+  height:100px;
+  padding:10px;
+  margin:5px;
+
+}
+
+
+
 .wrapper {
     margin-top: 5%;
     width: 60%;
     display: flex;
     justify-content: center;
-    font-family: "Arimo";
-    background-color: #CEA974;
     -webkit-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
     -moz-box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
     box-shadow: 9px 13px 25px 0px rgba(0, 0, 0, 0.18);
 
 }
-
-
 .container {
     width: 65%;
     padding: 5% 10%;
@@ -68,21 +213,9 @@ h1 {
 form {
     width: 100%;
 
-    >* {
-        margin-top: 20px;
-    }
 
-    input {
-        width: 100%;
-        min-height: 25px;
-        border: 0;
-        font-size: 1rem;
-        letter-spacing: .15rem;
-        font-family: "Arimo";
-        margin-top: 5px;
-        color: $maroon;
-        border-radius: 4px;
-    }
+
+
 
     label {
         text-transform: uppercase;
@@ -90,8 +223,7 @@ form {
         letter-spacing: 2px;
 
     }
-
-    h1 {
+ h1 {
         font-size: 24px;
         line-height: 10px;
         letter-spacing: 1px;
@@ -111,8 +243,7 @@ form {
         width: 45%;
     }
 }
-
-.address-info {
+address-info {
     display: flex;
     justify-content: space-between;
 
@@ -139,8 +270,7 @@ form {
         margin: 3px 0;
         height: 30px;
         width: 40%;
-        color: #cfc9e1;
-        background-color: #4a3b76;
+
         text-transform: uppercase;
         border: 0;
         border-radius: .3rem;
@@ -149,11 +279,6 @@ form {
 
 
     }
-
-
-
-
-
 
 button:focus {
     outline: none;
@@ -176,7 +301,7 @@ button:focus {
         }
     }
 
-    form h1 {
+    .form h1 {
         text-align: center;
     }
 
